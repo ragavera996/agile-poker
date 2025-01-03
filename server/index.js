@@ -18,6 +18,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/rooms', roomsRouter);
 
+app.use('/test', (req, res)=> {
+  res.send("Server is running")
+})
+
 handleSocket(io);
 
 const PORT = process.env.PORT || 3000;
