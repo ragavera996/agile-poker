@@ -4,7 +4,7 @@ import { RoomState } from '../models/room.model';
 
 @Injectable({ providedIn: 'root' })
 export class RoomService {
-  private apiUrl = 'https://agile-poker-server.vercel.app:3000/api/rooms';
+  private apiUrl = 'https://agile-poker-server.vercel.app/api/rooms';
 
   constructor(private http: HttpClient) {}
 

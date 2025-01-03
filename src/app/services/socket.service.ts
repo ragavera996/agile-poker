@@ -9,7 +9,7 @@ export class SocketService {
   private roomState = new BehaviorSubject<RoomState | null>(null);
 
   constructor() {
-    this.socket = io('https://agile-poker-server.vercel.app:3000/');
+    this.socket = io('https://agile-poker-server.vercel.app/');
     this.socket.on('room-state', (state: RoomState) => {
       this.roomState.next(state);
     });
